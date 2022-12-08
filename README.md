@@ -4,13 +4,13 @@ Live Demo:- https://saraha-app.onrender.com/
 
 
 FrontEnd:
-   * HTML
+   - HTML
    - CSS
    - JS
    - Bootstrap
    
 BackEnd:
-   * NodeJS
+   - NodeJS
    - Express
    - MongoDB
    - EJS
