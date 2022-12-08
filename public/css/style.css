@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Zen+Dots&display=swap');
+
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Zen Dots', cursive !important;
+}
+
+
+:root {
+	--green-color:#10BBB3;
+}
+
+.navbar {
+	background-color: var(--green-color) !important;
+}
+
+.text-green {
+	color: var(--green-color) !important;
+}
+
+.btn-saraha {
+	background-color: transparent;
+	outline: 1px solid  var(--green-color) !important;
+	color: var(--green-color) !important;
+	border: none !important;
+	transition: all 0.5s ease-in-out !important;
+}
+
+.btn-saraha:hover {
+	background-color: var(--green-color) !important;
+	color: #FFF !important;
+}
+
+.navbar-toggler {
+	border-color: #FFF !important;
+	box-shadow:none !important;
+}
+
+.navbar-toggler > * {
+	color: #FFF !important;
+}
+
+
+input , textarea{
+	caret-color: var(--green-color) !important;
+	font-size: medium !important;
+}
+
+
+
+.navbar-brand > img {
+	width: 20% !important;
+}
+
+
+.parent-form {
+	width: 40% !important;
+}
+
+
+
+img[alt='profile'] {
+	width: 9% !important;
+	position: absolute;
+	top: 0;
+	transform: translate(-50%,-50%);
+}
+
+
+
+@media screen and (max-width:900px) {
+
+
+	.parent-form {
+		width: 60% !important;
+		padding: 30px !important;
+	}
+
+	img[alt='profile'] {
+		width: 14% !important;
+	}
+
+}
+
+
+
+@media screen and (max-width:600px) {
+
+
+	.parent-form {
+		width: 85% !important;
+	}
+
+	img[alt='profile'] {
+		width: 17% !important;
+	}
+
+}
+
+
+
+.modal-body > a {
+	font-size: 12px !important;
+}
+
+
+.h20 {
+	font-size: 13px !important;
+}

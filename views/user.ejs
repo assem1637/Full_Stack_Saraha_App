@@ -1,0 +1,52 @@
+<%- include('./shared/header.ejs') %>
+
+
+        <div class="container d-flex flex-column justify-content-center text-center py-5">
+
+            <div class="profile bg-white border py-4 mt-5 position-relative">
+                <img src="/img/avatar.png" alt="profile"/>
+                <h3 class="text-muted mt-5 mb-2 text-capitalize"><%= name %></h3>
+                <form method="POST" action="/handleMessage/<%= Id %>">
+                    <textarea name="message" cols="30" rows="10" class="form-control w-75 mx-auto my-3" placeholder="Write Your Message Here ♥" style="height: 250px;"></textarea>
+                    <button class="btn btn-saraha"><i class="fa-regular fa-paper-plane"></i> Send</button>
+                </form>
+            </div>
+
+        </div>
+        
+
+       <div class="container d-flex justify-content-center align-items-center w-100 pb-5">
+        <button class="btn btn-saraha rounded-pill px-4" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-share-nodes"></i> Share Profile</button>
+       </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Share Profile</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <% if (isLoggedIn) { %>
+                     
+                        <a href="<%= protocol %>://<%= host %>/user/<%= Id %>" target="_blank"><%= protocol %>://<%= host %>/user/<%= Id %></a>
+
+                    <% } %>
+
+                    <% if (!isLoggedIn) { %>
+                     
+                        <p>To Show Your Link You Should First Sign In <i class="fa-solid fa-heart text-danger"></i></p>
+
+                    <% } %>
+                    
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+     
+
+<%- include('./shared/footer.ejs') %>

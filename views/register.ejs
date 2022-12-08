@@ -1,0 +1,48 @@
+<%- include('./shared/header.ejs') %>
+		
+
+        
+		<div class="my-5 parent-form rounded mx-auto text-center mt-5 border border-2 py-3 px-5  bg-white ">
+                
+			<div class="logo fs-1 opacity-50"><i class="fa-solid fa-pen-to-square"></i></div>
+			<h4 class="mb-5 text-green">Register</h4>
+			<form method="POST" action="/handleRegister">
+				<input type="text" name="name" placeholder="Entre Your Name" class="form-control mb-3 " />
+				<% if (errors.find((err)=> err.path[0] == 'name')) { %>
+				 
+					<div class="alert alert-danger text-center h20"><%= errors.find((err)=> err.path[0] == 'name').message %> </div>
+					
+				<% } %>
+				<input type="number" name="age" placeholder="Entre Your Age" class="form-control mb-3 " />
+				<% if (errors.find((err)=> err.path[0] == 'age')) { %>
+				 
+					<div class="alert alert-danger text-center h20"><%= errors.find((err)=> err.path[0] == 'age').message %> </div>
+					
+				<% } %>
+				<input type="text" name="email" placeholder="Entre Your Email" class="form-control mb-3 " />
+				<% if (errors.find((err)=> err.path[0] == 'email')) { %>
+				 
+					<div class="alert alert-danger text-center h20"><%= errors.find((err)=> err.path[0] == 'email').message %> </div>
+					
+				<% } %>
+				<input type="password" name="password" placeholder="Entre Your Password" class="form-control mb-3" />
+				<% if (errors.find((err)=> err.path[0] == 'password')) { %>
+				 
+					<div class="alert alert-danger text-center h20"><%= errors.find((err)=> err.path[0] == 'password').message %> </div>
+					
+				<% } %>
+				<input type="password" name="repassword" placeholder="Confirm Your Password" class="form-control mb-3" />
+				<% if (errors.find((err)=> err.path[0] == 'repassword')) { %>
+				 
+					<div class="alert alert-danger text-center h20"><%= errors.find((err)=> err.path[0] == 'repassword').message %> </div>
+					
+				<% } %>
+				<button type="submit" class="btn btn-saraha w-100 my-4">Register</button>
+				<div class="text-green pb-3">
+					If You Have Email You Can <a href="/login" class="text-green">Login</a>
+				</div>
+			</form>
+                
+		</div>
+
+<%- include('./shared/footer.ejs') %>

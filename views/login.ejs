@@ -1,0 +1,19 @@
+<%- include('./shared/header.ejs') %>
+        
+		<div class="parent-form rounded mx-auto text-center mt-5 border border-2 p-5  bg-white ">
+			
+			<div class="logo fs-1 opacity-50"><i class="fa-solid fa-user-secret"></i></div>
+			<h4 class="mb-5 text-green">Login</h4>
+			<form method="POST" action="/handleLogin">
+				<input type="text" name="email" placeholder="Entre Your Email" class="form-control mb-3 " />
+				<input type="password" name="password" placeholder="Entre Your Password" class="form-control mb-5" />
+				<button type="submit" class="btn btn-saraha w-100 mb-4">Login</button>
+				<div class="text-green">
+					If You Don't Have Email You Can <a href="/register" class="text-green">Register</a>
+				</div>
+			</form>
+			
+		</div>
+     
+
+<%- include('./shared/footer.ejs') %>
